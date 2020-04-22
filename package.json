@@ -1,9 +1,9 @@
 {
-  "name": "callbag-take-while",
-  "version": "2.0.0",
-  "description": "👜 Callbag operator which emits values emitted by the source as long as each value satisfies the given predicate, and then completes as soon as predicate is not satisfied.",
-  "main": "./dist/callbag-take-while.cjs.js",
-  "module": "./dist/callbag-take-while.esm.js",
+  "name": "callbag-to-finally",
+  "version": "0.1.0",
+  "description": "👜 Callbag operator which emits values emitted by the source as long as each value satisfies the given predicate, and then completes as soon as predicate is not satisfied. But call lastly function before callbag is over.",
+  "main": "./dist/callbag-take-to-finally.cjs.js",
+  "module": "./dist/callbag-take-to-finally.esm.js",
   "files": [
     "dist",
     "*.d.ts"
@@ -17,18 +17,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Andarist/callbag-take-while.git"
+    "url": "git+https://github.com/Pengeszikra/callbag-take-to-finally.git"
   },
   "keywords": [
     "callbag",
     "callbags"
   ],
-  "author": "Mateusz Burzyński <mateuszburzynski@gmail.com> (https://github.com/Andarist)",
+  "author": "Peter Vivo <pengeszikra@gmail.com> (https://github.com/Pengeszikra)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Andarist/callbag-take-while/issues"
+    "url": "https://github.com/Pengeszikra/callbag-take-to-finally/issues"
   },
-  "homepage": "https://github.com/Andarist/callbag-take-while#readme",
+  "homepage": "https://github.com/Pengeszikra/callbag-take-to-finally#readme",
   "dependencies": {
     "callbag": "^1.1.0"
   },

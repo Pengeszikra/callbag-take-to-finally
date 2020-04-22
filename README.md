@@ -1,6 +1,7 @@
 # callbag-take-while
 
 Callbag operator which emits values emitted by the source as long as each value satisfies the given predicate, and then completes as soon as predicate is not satisfied.
+But call lastly function before callbag is over. This operator forked from: [Andarist: takeWhile](https://github.com/Andarist/callbag-take-while)
 
 ## Example
 
@@ -8,13 +9,16 @@ Callbag operator which emits values emitted by the source as long as each value 
 import forEach from 'callbag-for-each'
 import fromIter from 'callbag-from-iter'
 import pipe from 'callbag-pipe'
-import takeWhile from 'callbag-take-while'
+import takeToFinally from 'callbag-take-to-finally'
 
 pipe(
-  fromIter([1, 2, 3, 4, 5]),
-  takeWhile(i => i !== 4),
-  forEach(value => {
-    actual.push(value) // will log 1, 2, 3
-  }),
+  fromIter([1, 2, 3, 4, 5, 6, 7]),
+  takeToFinally(
+    data => data < 4.3,
+    data => console.log(`failed on test: ${data}`),
+  ),
+  forEach(console.log),
 )
+
+// log: 1, 2, 3, 4, "failed on test: 5"
 ```

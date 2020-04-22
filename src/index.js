@@ -1,4 +1,4 @@
-export default function takeWhile(predicate) {
+export default function takeToFinally(predicate, lastly) {
   return source => (start, sink) => {
     if (start !== 0) return
 
@@ -10,6 +10,7 @@ export default function takeWhile(predicate) {
       }
 
       if (type === 1 && !predicate(data)) {
+        lastly(data)
         sourceTalkback(2)
         sink(2)
         return
