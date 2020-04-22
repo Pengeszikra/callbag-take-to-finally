@@ -1,7 +1,7 @@
 # callbag-take-while
 
-Callbag operator which emits values emitted by the source as long as each value satisfies the given predicate, and then completes as soon as predicate is not satisfied.
-But call lastly function before callbag is over. This operator forked from: [Andarist: takeWhile](https://github.com/Andarist/callbag-take-while)
+Callbag operator which emits values emitted by the source as long as each value satisfies the given predicate, and then completes as soon as predicate is not satisfied. Call lastly function when callbag is over.
+This operator forked from: [Andarist: takeWhile](https://github.com/Andarist/callbag-take-while)
 
 ## Example
 
