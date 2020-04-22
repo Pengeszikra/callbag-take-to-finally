@@ -1,6 +1,6 @@
 {
-  "name": "callbag-to-finally",
-  "version": "0.1.0",
+  "name": "callbag-take-to-finally",
+  "version": "0.2.0",
   "description": "👜 Callbag operator which emits values emitted by the source as long as each value satisfies the given predicate, and then completes as soon as predicate is not satisfied. But call lastly function before callbag is over.",
   "main": "./dist/callbag-take-to-finally.cjs.js",
   "module": "./dist/callbag-take-to-finally.esm.js",
